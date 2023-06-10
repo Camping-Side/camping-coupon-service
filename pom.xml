@@ -10,12 +10,13 @@
     </parent>
     <groupId>com.camping</groupId>
     <artifactId>coupon-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0</version>
     <name>coupon-service</name>
     <description>coupon-service</description>
     <properties>
         <java.version>11</java.version>
         <spring-cloud.version>2021.0.5</spring-cloud.version>
+        <swagger.version>2.9.2</swagger.version>
     </properties>
     <repositories>
         <repository>
@@ -83,7 +84,7 @@
         <dependency>
             <groupId>com.camping</groupId>
             <artifactId>common</artifactId>
-            <version>1.0.11-REALEASE</version>
+            <version>1.0.12-REALEASE</version>
         </dependency>
         <dependency>
             <groupId>com.querydsl</groupId>
@@ -93,6 +94,27 @@
         <dependency>
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-sleuth</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+            <version>2.2.8.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${swagger.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>${swagger.version}</version>
         </dependency>
     </dependencies>
     <dependencyManagement>

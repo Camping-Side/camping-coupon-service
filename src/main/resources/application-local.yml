@@ -4,6 +4,9 @@ server:
 spring:
   application:
     name: coupon-service
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
 
 eureka:
   instance:
@@ -15,3 +18,8 @@ eureka:
     service-url:
       defaultZone: http://127.0.0.1:9761/eureka
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh, health, beans, busrefresh
